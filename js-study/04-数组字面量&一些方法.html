@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // 正常创建一个数组 let arr=new Array();
+    // 使用字面量来创建一个数组
+    //  语法：[]
+    //      let arr=[];
+    // 使用字面量来创建数组时，可以在创建时就指定数组中的元素。
+    let arr=[1,2,3,4,5,6];
+    //使用构造函数创建数组时也可以将元素按照参数传递进去
+    // 数组中也可以存放对象或者函数
+    // js中除了使用for循环去遍历数组以外，也可以使用forEach()去遍历，这个方法只支持IE8以上。
+    // forEach()方法需要一个函数作为参数
+    // 
+    arr.forEach(function(实参1,实参2,实参3){
+        // 数组有几个元素这个函数就会执行几次，每一次元素都会以实参的形式传递进来。可以自己编写相应的代码使用这个实参
+    })
+    // 像这种函数，由我们创建但是不由我们调用的，我们称为回调函数
+    // sort()方法可以用来给数组排序，但是使用的是unicode编码，所以比如说11在排序中就有可能大于3.
+    // 我们可以在sort中添加一个回调函数，通过传入参数，来实现排序.浏览器会根据返回的参数来决定
+    // 返回1，两个元素交换位置，返回0，两个元素不变，返回-1，两个元素位置也不变。
+
+    arr.sort(function(a,b){
+        if(a>b)
+        {return 1;}
+        if(a=b)
+        {return 0;}    
+        if(a<b)
+        {return -1;}
+    });或者
+    arr.sort(function(a,b){
+   return a-b;//升序排列
+   return b-a;//降序排列
+    });
+
+</script>
+<body>
+    
+</body>
+</html>

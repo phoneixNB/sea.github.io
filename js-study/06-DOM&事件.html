@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // js通过DOM来对HTML文档进行操作。
+    //          1.文档：表示整个html网页
+    //          2.对象：将网页的每一个部分都转化成对象
+    //          3 模型: 表示对象之间的关系
+    // 事件就是文档或浏览器窗口中发生的一些特定交互的瞬间，比如点击按钮，鼠标移动，关闭页面
+    // 处理事件：我们可以在事件对应的属性中设置一些js代码，这样当事件被触发时，这些代码就会执行
+
+    // 
+</script>
+<body>
+    <button id="btn" onclick="alert('讨厌，你点我干嘛')">我是一个按钮</button>
+    <script>
+        //浏览器已经为我们提供了文档节点对象，就是windows属性，可以在页面中直接使用，文档节点代表的是整个网页
+        // 获取到button对象
+        let btn=document.getElementById("btn");
+        // 修改按钮的文字
+        btn.innerHTML="im button"; 
+    </script>
+</body>
+</html>

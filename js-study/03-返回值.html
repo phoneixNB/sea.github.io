@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //可以使用return值返回
+    // 语法和c一样.作用也一致
+    // return后可以返回任意类型的值,包括对象或者函数
+    // 立即执行函数.函数定义完了立即会执行,往往执行一次
+    (function(a,b){
+        console.log(a+b);
+    })(123,456);
+    function fun()
+    {
+        function fun1()
+        {
+            console.log("我是fun1");
+            return 0;
+        }
+        return fun1();
+    }
+    a=fun();
+    console.log(a);
+</script>
+<body>
+    
+</body>
+</html>

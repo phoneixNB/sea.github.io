@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // object是除五种基本类型以外的类型--引用数据类型，也就是说除了这五种数据类型以外，其他都是对象
+        // 对象属于一种复的数据类型，在对象中可以保存多种数据类型的属性
+        // 对象的分类：
+        //      1.内建对象：比如String，Boolean
+        //      2.宿主对象：比如BOM，DOM，主要由浏览器和js环境提供
+        //      3.自定义对象：由开发人员自己创建的对象。
+        // 使用new关键字调用的函数，是构造函数constructor
+        //      1.在对象中保存的值称为属性
+        //      2.向对象中添加属性
+        //      3.语法：对象.属性名=属性值
+        //      
+        var obj=new Object();
+        
+        obj.name="孙悟空";
+        obj.gender="男"
+        obj.age=18
+        console.log(obj)
+        // 读取对象中的属性
+        // 语法:对象.属性
+        // 如果读取的对象中没有这个属性,不会报错,会返回undefined
+        // 删除对象的属性
+        //      delete 对象.属性名
+        // 向对象中添加属性
+        //      不强制遵守标识符的规范,如果要使用特殊的属性名,不能采用.name的方式
+        //                  语法:对象["属性名"]=属性值.可以存入特殊属性名,但是读取的时候也要用这种方式读取
+        // 使用[]这种方式更加的灵活,这样在[]中可以直接传递一个变量,这样变量值是多少就会读取那个属性
+        // 属性值可以是任意的数据类型.甚至也可以是一个对象
+        // in运算符:通过该运算符可以检查一个对象中是否含有指定的属性
+        //      如果有则返回true,没有则返回false
+        //      语法:属性名 in 对象
+        // object是保存在堆内存中,每创建一个新对象,都会分配一个堆内存,栈内存里存储的指针.如果通过变量保存一个对象,那么变量保存的是对象的地址,所以对象改变,这个变量也会改变.是基本数据类型是存在栈内存中的
+        // 使用工厂方法创建对象
+        //          通过该方法可以大批量创建对象
+        // 构造函数就是一个普通的函数,不同的是习惯首字母大写.普通函数是直接调用,而构造函数需要使用new关键字来调用
+        function Person() {  };
+        function creatperson(name,age,sex ) {
+            var obj=new Person();//创建一个新对象
+            obj.name=name;
+            obj.age=age;
+            obj.sex=sex;//向对象中添加属性
+            return obj;//将新对象返回
+          }
+        //   使用工厂方法创建的对象都是Object这个类型,就导致我们无法区分不同类型的对象,可以通过构造函数来区别
+        // 使用instanceof可以检查一个对象是否是一个类的实例
+        //              语法:console.log(obj instanceof 类);
+        // 所有的对象都是Object的后代;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
