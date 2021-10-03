@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // document.createElement("标签");可以用于创建一个元素节点对象，他需要一个标签名作为参数，将会根据该标签名创建元素节点对象，并将创建好的对象作为返回值返回
+        // document.createTextNode("文本")：用来创建一个文本
+        // appendChild()将文本节点设置为标签节点的子节点
+        //      用法：父节点.appendChild(子节点)
+        // 更多DOM增删操作W3C手册有详细解释
+        // 使用innerHTML+-也可以完成DOM的增删
+        // 语法：元素.currentStyle.样式名//这个可以获取当前元素当前样式值，但是只有IE浏览器支持
+        // 在其他浏览器中---getComputerStyle(要获取样式的元素，可以传递一个伪元素一般都是null)。使用这个方法来获取元素当前样式。这个方法是window自带的
+        // 这个函数返回的是一个对象，封装着所有的元素的样式，读取需要读取对象中的样式
+        // 事件属性：保存着所有信息
+        window.onload=function(){
+        let boxdiv=document.getElementById("boxdiv");
+        let view=document.getElementById("view");
+        boxdiv.onmousemove=function(event){
+           let x=event.clientX;
+           let y=event.clientY; 
+           view.innerHTML="x="+x+",y="+y;
+        }
+    }
+        
+    </script>
+    <style>
+        #boxdiv{
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 20px 0px;
+        }
+        #view{
+            width: 300px;
+            height: 50px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="boxdiv"></div>
+    <div id="view"></div>
+</body>
+</html>

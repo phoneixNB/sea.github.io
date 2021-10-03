@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 通过下面这种方式创建,内容一样两个symbol是不一样的
+        let s=Symbol();
+        console.log(s,typeof s)
+        // 通过下面这种方式创建,内容一样两个symbol就是一样的
+        let s1=Symbol.for("phoneix");
+        let s2=Symbol.for("phoneix");
+        console.log(s1==s2);
+        // 不能与其他数据进行运算
+        // symbol:表示独一无二的值,像对象中添加属性和方法
+        let game={}
+        //声明一个对象
+        let methods= {
+                up:Symbol(),
+                down:Symbol()
+            }
+        game[methods.up]=function(){
+            console.log("1");
+        }
+        game[methods.down]=function(){
+            console.log("2");
+        }
+        console.log(game);
+        // for of可以用来进行数组的遍历
+
+        
+    </script>
+</body>
+</html>

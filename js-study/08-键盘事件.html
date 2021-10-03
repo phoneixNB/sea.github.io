@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+    <script>
+        // 键盘事件不会绑定DIV,一般都会给一些可以获取焦点的对象或者是document
+        window.onload=function(){
+        let dir=0;
+        setInterval(function(){
+            switch(dir){
+                case 38:
+                       box1.style.top=box1.offsetTop- 10+"px";
+                       break;
+                case 37:
+                       box1.style.left=box1.offsetLeft- 10+"px";
+                       break;
+                case 40:
+                       box1.style.top=box1.offsetTop+ 10+"px"; 
+                       break;      
+                case 39:
+                       box1.style.left=box1.offsetLeft+ 10+"px";
+                       break;
+               }})
+           document.onkeydown=function(event){
+                event=event||window.event;
+                dir=event.keyCode;
+               
+           }
+           document.onkeyup=function(){
+               dir=0;
+           }
+        }
+    </script>
+</head>
+<body>
+    <div id="box1"></div>
+</body>
+</html>

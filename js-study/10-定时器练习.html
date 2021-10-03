@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color:rebeccapurple;
+            position: absolute;
+        }
+    </style>
+    <script>
+     window.onload=function(){
+         let btn01=document.getElementById("btn01");
+         let box1=document.getElementById("box1");
+         let timer;
+         btn01.onclick=function(){
+            clearInterval(timer);
+             timer=  setInterval(function(){
+                 let oldValue=box1.offsetLeft;
+                 box1.style.left=oldValue+10+"px";
+             },30);
+            
+         };
+     }
+    </script>
+</head>
+<body>
+    <button id="btn01">点击按钮box1向右移动</button><br><br>
+    <div id="box1"></div>
+</body>
+</html>

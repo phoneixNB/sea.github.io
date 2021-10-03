@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 创建worker对象
+        var worker=new Worker("workers.js")
+        // 绑定接受消息的监听
+        worker.onmessage=function(event){
+            // event.data是返回的数据
+            // 此处添加对数据的处理和使用
+        }
+        // 向分线程发送消息
+        worker.postMessage(此处填写数据)
+    </script>
+</body>
+</html>

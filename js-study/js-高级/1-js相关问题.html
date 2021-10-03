@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // undefind时定义了没赋值,null是定义了且赋值了,赋值了一个null
+        // null可以用来断开对象,使其成为垃圾对象,便于垃圾回收器回收
+        // 数据:存储在内存中的0101.....
+        // 内存:内存条通电后产生的可存储数据的空间(临时的)
+        // 变量:可变化的量,每个变量都对应一块小内存,变量名用来查找对应的内存,变量值就是内存中保存的数据.
+        //  IIFE:立即执行函数(function)() 作用：匿名函数自调用，变量不会污染全局空间  
+        (function(){
+            alert('hello')
+        })();
+    </script>
+</body>
+</html>

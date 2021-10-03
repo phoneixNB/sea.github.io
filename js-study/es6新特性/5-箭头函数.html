@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // es6中允许我们使用[箭头]定义函数(=>)
+        let fun=(形参1,形参2)=>{
+            return 形参1+形参2;
+        }
+        // 特性:
+        //      1.this是静态的,this始终指向函数声明是所在作用域下的值
+        function getname(){
+            console.log(this.name)
+        }
+        let get=()=>{
+            console.log(this.name)
+        }
+        window.name="phoneix"
+        const school={
+            name:"NB"
+        }
+        getname();
+        get();
+        getname.call(school);
+        get.call(school);
+        //      2.不能作为构造实例化对象
+        //      3.不能使用arguments变量
+        //      4.箭头函数的缩写
+        //              1):省略小括号:当形参有且只有一个的时候
+        //              2):省略花括号:,当代码体只有一条语句的时候,此时return必须省略,也就是说语句的执行结果就是返回值
+        
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // obj.set:可以向Map中添加一个新的值
+        // obj.delete:删除一个值
+        // obj.set:获取
+        // es5写法
+        function phone(brand,price){
+            this.brand=brand;
+            this.price=price;
+        }
+        // 添加方法
+        phone.prototype.call=function(){
+            console.log("我可以打电话")
+        }
+        // 实例化对象
+        let huawei=new phone('华为',1999)
+        class Phone{
+            // 构造方法,名字 是固定的,当我们实例化对象时就会执行
+            constructor(brand,price){
+                this.brand=brand;
+                this.price=price;
+            }
+            // 添加方法
+            call(){
+                console.log("我可以打电话");
+            }
+        }
+        let one=new Phone("1+",29999)
+        console.log(one)
+        // 静态成员
+    </script>
+
+
+</body>
+</html>

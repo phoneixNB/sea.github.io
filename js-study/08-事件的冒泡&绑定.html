@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 时间的冒泡，就是指事件传导，当后代元素上的事件触发，其祖辈元素的相同事件也会被触发
+        // 在开发中，冒泡是非常有用的
+        // 如果不希望事件冒泡,直接写event.cancelBubble设置为true
+        // 事件的委派
+        //      统一将事件绑定给元素共同的祖先,这样当我们后代的元素上的事件触发时,会一直冒到祖先为止
+        // 使用对象.事件=函数的形式绑定响应函数,只能绑定一个,否则会被后面的覆盖
+        // 我们可以通过.addEventListener()来设置响应函数
+        //          参数:1.事件的字符串,不要写on
+        //               2.回调函数,当事件触发时函数会被调用
+        //               4.是否在捕获阶段触发事件,一般默认传fasle
+        // 在IE8中可以使用attachEvent()来绑定事件.参数是上一个的前两个,不过要加上on,但是他的绑定事件顺序和上一个相反
+        // 事件的传播:
+        //       微软:事件应该在冒泡阶段执行
+        //       网景:事件应该先触发最外面的祖先,然后向内传递
+        //       w3c:认为在捕获阶段,会从最外层开始捕获,但是不会触发事件.然后开始目标阶段,事件捕获到目标元素,开始冒泡阶段,事件从目标元素开始执行冒泡
+        // 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

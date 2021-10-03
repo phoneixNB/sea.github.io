@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ss{
+            width: 720px;
+        }
+        h2{
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+        }
+        .itme{
+            height: 60px;
+            width: 200px;
+            border: 1px solid green;
+            margin: 20px;
+        }
+        .bgc{
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 声明变量: -->
+    <script>
+        let a;
+        let  e=100;
+        // 特性:1.不可以重复的声明
+        //      2.块级作用域,只在代码块里有用
+        //      3.不存在变量提升
+        //      4.不影响作用域链.
+    </script>
+    <!-- 声明常量 -->
+    <script>
+        const  NAME=于守涵;
+        // 1.一定要赋初始值
+        // 2.一般常量使用大写
+        // 3.常量的值不能修改
+        // 4.块级作用域
+        // 5.对于数组和对象的元素的修改,不算对常量的修改,不会报错
+    </script>
+            <div id="ss">
+                <h2 class="page-header">点击切换颜色</h2>
+                <div class="container">
+                    <div class="itme"></div>
+                    <div class="itme"></div>
+                    <div class="itme"></div>
+                </div>
+            </div>
+            <script>
+                let items=document.getElementsByClassName('itme');
+                for(let i=0;i<items.length;i++){
+                    items[i].addEventListener('click',function(){
+                        items[i].classList.add("bgc");
+                    })
+                }
+            </script>
+</body>
+</html>

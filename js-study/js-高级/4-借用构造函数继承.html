@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 借用构造函数继承(假的)
+        function People(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        function Student(name,age,price){
+            People.call(this,name,age);//相当于：this.People(name,age)
+            this.price=price;
+        }
+        var s=new Student('tom',12,3777)
+        console.log(s);
+    </script>
+</body>
+</html>

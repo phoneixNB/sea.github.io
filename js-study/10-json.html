@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // json-js中的对象只有js自己认识,其他语言都不认识.json就是一个特殊格式的字符串,这个字符串乐意被任意的语言识别,主要用来数据的交互
+        // json的格式的js对象的格式一样,只不过json的属性名必须加双引号
+        // json中不允许传函数对象
+        // json分类:
+        //          1.对象
+        //          2.数组
+        // json提供了把json转化为js对象
+        let json='{"name":"sunwuk","age":18}'
+        let a=JSON.parse(json);
+        console.log(a.name);
+        // 下面这个函数可以将js对象转化成json字符串,需要一个js对象作为参数,返回一个json字符串
+        JSON.stringify()
+    </script>
+</head>
+<body>
+</body>
+</html>

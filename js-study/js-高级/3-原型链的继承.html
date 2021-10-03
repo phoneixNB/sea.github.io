@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 父类型
+        function Supper(){
+            this.supProp='Supper property'
+        }
+        Supper.prototype.showSupperProp=function(){
+            console.log(this.supProp);
+        }
+        // 子类型,要想实现原型继承，子类型的原型为父类型的一个实例
+        function Sub(){
+            this.subProp='Sub property'
+        }
+        Sub.prototype=new Supper();//让子类型的原型成为父类型的属性
+        Sub.prototype.constructor=Sub//让子类型的原型的constructor指向子类型
+        Sub.prototype.showSubProp=function(){
+            console.log(this.supProp)
+        }
+        var sub=new Sub();
+        sub.showSupperProp()
+        console.log(Sub.prototype)
+       
+
+    </script>
+</body>
+</html>
