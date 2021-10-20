@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #btn1{
+           
+            background-color: fuchsia;
+            color: cornsilk;
+        }
+        #btn2{
+            background-color:yellow;
+            color: darkcyan;
+        }
+        #btn3{
+            background-color:green;
+            color: cornsilk;
+        }
+        #btn4{
+            background-color:red;
+            color: cornsilk;
+        }
+    </style>
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1>基本使用</h1>
+        <button id="btn1">发送get请求</button>
+        <button id="btn2">发送put请求</button>
+        <button id="btn3">发送post请求</button>
+        <button id="btn4">发送delete请求</button>
+    </div>
+    <script>
+        const btns=document.querySelectorAll('button')
+        // 创建实例对象
+        const duanzi=axios.create({
+            // 在这里配置对象
+            baseURL:"https://api.apiopen.top",
+            timeout:2000,
+        })
+        // 这里duanzi与axios对象的功能几近一样
+        // 可以这样用
+             btns[0].onclick=function(){   
+                duanzi({
+                    url:"/getJoke",
+                    method:"GET"
+                }).then(response=>{
+                    console.log(response.data)
+                })
+            }
+            btns[1].onclick=function(){
+                duanzi.get("/getJoke").then(response=>{
+                console.log(response.data)
+        })}
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .rescher{
+            appearance: none;
+            width:100%;
+            height: 30px;
+            margin: 0 auto;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid salmon;
+        }
+        .rescher1{
+            width:90%;
+            height: 50px;
+            margin: 0 auto;
+        }
+        .Box{
+            position:sticky;
+            left: 0;
+            top:0;
+            z-index: 1000;
+        }
+        .Box1{
+            background-color: salmon;
+        }
+        .span1 {
+            display: block;
+            font-size: 20px;
+            margin: 20px 0 20px 2px;
+            color: white;
+        }
+        #BTN{
+            display: flex;
+            flex-direction: row;
+            z-index: 1000;
+            background-color: white;
+        }
+        
+        #btn1,#btn2,#btn3{
+            margin-top: 10px;
+            padding: 0px 0px 10px 0px;
+            font-size: 20px;
+            flex-grow: 1;
+            text-align: center;
+            border-bottom: 3px solid grey;
+            
+        }
+        #Box2{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 2000px;
+            border: 1px solid cadetblue;
+            margin-top: 30px;
+        }
+        .style1{
+            transition: 0.5s;
+            border-bottom: 3px solid salmon!important;
+        }
+        .style2{
+            transition: 0.5s;
+            border-bottom: 3px solid grey!important;
+        }
+        .style3{
+            background-color: #fff;
+            width: 100%;
+            height: 100%;
+        }
+        .style4{
+            width: 0%;
+            height: 0%;
+        }
+    </style>
+    <script>
+      
+        window.onload=function(){
+            let BTN=  document.getElementById("BTN").getElementsByTagName('div');
+            let Box2= document.getElementById("Box2").getElementsByTagName('div');
+            BTN[0].onclick=function(){boxfun(0);boxfun1(0);} 
+            BTN[1].onclick=function(){boxfun(1);boxfun1(1);}
+            BTN[2].onclick=function(){boxfun(2);boxfun1(2);}
+            let boxfun=function(index){
+            for(i=0;i<BTN.length;i++)
+                if(index==i){
+                    BTN[i].className="style1";
+                }
+                else{
+                    BTN[i].className="style2"
+                }
+                
+            }
+        let boxfun1=function(index){
+            for(i=0;i<Box2.length;i++)
+                if(index==i){
+                    Box2[i].className="style3";
+                }
+                else{
+                    Box2[i].className="style4"
+                }
+            }
+        }
+       
+       
+    </script>
+</head>
+<body>
+  <div class="Box">
+    <div class="Box1">
+      <span class="span1">商品列表</span>
+      <form action="#">
+          <div class="rescher1">
+              <input type="text" class="rescher" placeholder="搜索">
+          </div>
+      </form>
+    </div>
+    <div id="BTN">
+        <div id="btn1">首页</div>
+        <div id="btn2">商品</div>
+        <div id="btn3">我的</div>
+    </div>
+  </div>
+  <div id="Box2">
+      <div id="box1">
+            1
+      </div>
+      <div id="box2">
+            2
+      </div>
+      <div id="box3">
+            3
+      </div>
+  </div>    
+</body>
+</html>

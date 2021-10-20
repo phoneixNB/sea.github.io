@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="swiper-6.8.1/swiper-master/package/swiper-bundle.min.css">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container{
+      width: 100%;
+      height:600px;
+    }
+     .rescher{
+       appearance: none;
+       border:1px solid salmon;
+       width:100%;
+       height: 30px;
+       margin: 0 auto;
+       font-size: 20px;
+       text-align: center;
+
+    }
+    .rescher1{
+       width:90%;
+       height: 50px;
+       margin: 0 auto;
+     }
+     .span1 {
+       display: block;
+       font-size: 20px;
+       margin: 20px 0 20px 2px;
+       color: white;
+     }
+     .Box1{
+       background-color: salmon;
+       position:sticky;
+       left: 0;
+       top:0;
+       z-index: 1000;
+     }
+     .box2{
+       display: flex;
+       width: 100%;
+       margin: 20px 0px;
+       flex-direction:row;
+       justify-content: center;
+       background-color: whitesmoke;
+     }
+     .box2>a{
+       text-decoration: none;
+     }
+     .box2>a>div{
+       margin: 30px 80px;
+     }
+    .box2>a>div>span{
+      display: block;
+      font-size: 20px;
+      color: black;
+      text-align: center;
+    }
+    .text1{
+      font-size: 30px;
+      color:#cb85bf;
+      font-weight: bold;
+
+    }.text3{
+      font-size: 30px;
+      color:#27855f;
+      font-weight: bold;
+
+    }.text4{
+      font-size: 30px;
+      color:#855d3c;
+      font-weight: bold;
+
+    }
+    .text2{
+      font-size: 9px;
+    }
+    .box4{
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      width: 100%;
+    }
+    .box4-1 {
+      margin: 0 10px 15px 0;
+    }
+    .box4-2{
+      margin: 0 10px 0 0;
+    }
+    .menu{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      position: sticky;
+      margin-top:20px;
+      left:0;
+      right: 0;
+      bottom: 0;
+      z-index: 1000;
+      background-color: whitesmoke;
+    }
+    .menu>a {
+      text-decoration: none;
+      color: black;
+      margin: 0 100px;
+    }
+    .menu>a>div>span{
+           display: block;
+           font-size: 20px;
+           color: black;
+           text-align: center;
+         }
+
+  </style>
+</head>
+<script src="swiper-6.8.1/swiper-master/package/swiper-bundle.min.js"></script>
+<!-- 结构以及class的类名不允许更改 -->
+<body>
+<div class="Box1">
+<span class="span1">优购首页</span>
+<form action="#">
+  <div class="rescher1">
+  <input type="text" class="rescher" placeholder="搜索">
+  </div>
+</form>
+</div>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#"><img src="pit/img.png" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="pit/img_1.png" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="pit/img_2.png" alt=""></a></div>
+  </div>
+  <!-- 如果需要分页器 -->
+  <div class="swiper-pagination"></div>
+  <!-- 如果需要导航按钮 -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- 如果需要滚动条 -->
+  <div class="swiper-scrollbar"></div>
+</div>
+
+<div class="box2">
+  <a href="#"><div><img src="pit/img_3.jpg" alt=""><br><span>分类</span></div></a>
+  <a href="#"><div><img src="pit/img_3.jpg" alt=""><br><span>秒杀拍</span></div></a>
+  <a href="#"><div><img src="pit/img_3.jpg" alt=""><br><span>超市购</span></div></a>
+  <a href="#"><div><img src="pit/img_3.jpg" alt=""><br><span>母婴品</span></div></a>
+</div>
+<div class="text1">时尚女装</div>
+<div class="text2">&nbspFASHION WOMEN</div>
+<div class="box4">
+  <div>
+    <a href="#"><img src="pit/img_4.jpg" alt=""></a>
+  </div>
+  <div>
+    <div class="box4-1"><a href="#"><img src="pit/img_5.jpg" alt=""></a></div>
+    <div class="box4-2"><a href="#"><img src="pit/img_6.jpg" alt=""></a></div>
+  </div>
+  <div>
+    <div class="box4-1"><a href="#"><img src="pit/img_7.jpg" alt=""></a></div>
+    <div class="box4-2"><a href="#"><img src="pit/img_8.jpg" alt=""></a></div>
+  </div>
+</div>
+<div class="text3">户外运动</div>
+<div class="text2">&nbspFASHION WOMEN</div>
+<div class="box4">
+  <div>
+    <a href="#"><img src="pit/img_4.jpg" alt=""></a>
+  </div>
+  <div>
+    <div class="box4-1"><a href="#"><img src="pit/img_5.jpg" alt=""></a></div>
+    <div class="box4-2"><a href="#"><img src="pit/img_6.jpg" alt=""></a></div>
+  </div>
+  <div>
+    <div class="box4-1"><a href="#"><img src="pit/img_7.jpg" alt=""></a></div>
+    <div class="box4-2"><a href="#"><img src="pit/img_8.jpg" alt=""></a></div>
+  </div>
+</div>
+<div class="text4">箱包配饰</div>
+<div class="text2">&nbspFASHION WOMEN</div>
+<div class="box4">
+  <div>
+    <a href="#"><img src="pit/img_4.jpg" alt=""></a>
+  </div>
+  <div>
+    <div class="box4-1"><a href="#"><img src="pit/img_5.jpg" alt=""></a></div>
+    <div class="box4-2"><a href="#"><img src="pit/img_6.jpg" alt=""></a></div>
+  </div>
+  <div>
+    <div class="box4-1"><a href="#"><img src="pit/img_7.jpg" alt=""></a></div>
+    <div class="box4-2"><a href="#"><img src="pit/img_8.jpg" alt=""></a></div>
+  </div>
+</div>
+<div class="menu">
+  <a href="#"><div><img src="pit/img_9.jpg" alt=""><br><span>主页</span></div></a>
+  <a href="#"><div><img src="pit/img_9.jpg" alt=""><br><span>分类</span></div></a>
+  <a href="#"><div><img src="pit/img_9.jpg" alt=""><br><span>购物车</span></div></a>
+  <a href="#"><div><img src="pit/img_9.jpg" alt=""><br><span>我的</span></div></a>
+</div>
+<script>
+  var mySwiper = new Swiper('.swiper-container', {
+    //direction: 'vertical', // 垂直切换选项
+    direction: 'horizontal',//水平方向
+    loop: true, // 循环模式选项
+
+    autoplay: true,//等同于以下设置
+    autoplay: {
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false,//改为false,点击按钮可以继续动
+    },
+
+
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // 如果需要滚动条
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })
+</script>
+</body>
+
+</html>

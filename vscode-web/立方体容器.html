@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid slategray;
+            transform-style: preserve-3d;
+            position: absolute;
+            left:100px;
+            top: 100px;
+        }
+        .box>div{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left:0px;
+            top: 0px;
+            opacity: 0.5;
+
+
+        }
+        .box .float1{
+            background-color: red;
+            transform: translateY(-150px) rotateX(90deg);
+        } .box .float2{
+            background-color: slategray;
+            transform: translateY(150px) rotateX(-90deg);
+        } .box .float3{
+            background-color: cadetblue;
+            transform: translateX(-150px) rotateY(90deg);
+        } .box .float4{
+            background-color: violet;
+            transform: translateX(150px) rotateY(90deg);
+        } .box .float5{
+            background-color: forestgreen;
+            transform: translateZ(-150px);
+        } .box .float6{
+            background-color: saddlebrown;
+            transform: translateZ(150px);
+        }
+          .box:hover{
+              transform: rotateX(-10deg) rotateY(-15deg);
+          }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="float1"></div>
+    <div class="float2"></div>
+    <div class="float3"></div>
+    <div class="float4"></div>
+    <div class="float5"></div>
+    <div class="float6"></div>
+</div>
+</body>
+</html>

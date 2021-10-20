@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业</title>
+</head>
+<body>
+<table border="1" bordercolor="blue" cellspacing="1" style="width:400px;height:300px;color:red;">
+    <tr>
+        <th>1</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+</table>
+<table border="1"  style="width: 400px">
+    <caption>网格表格</caption>
+    <thead>
+    <tr>
+        <th colspan="3">网站名称</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>网站标题</td>
+        <td colspan="2">搜索框</td>
+    </tr>
+    <tr style="height: 100px">
+        <td>左边</td>
+        <td>中间</td>
+        <td>右边</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <th colspan="3">网站底部信息</th>
+    </tr>
+    </tfoot>
+</table>
+<table border="1">
+    <caption>综合信息</caption>
+    <tr style="width: 400px;height: 30px">
+        <td rowspan="8" style="width: 100px;height: 30px"><img src="banner1.jpg" width="100" height="240" alt="图片"></td>
+        <td rowspan="4" style="width: 100px;height: 30px">11</td>
+        <td rowspan="2" style="width: 100px;height: 30px">12</td>
+        <td style="width: 100px;height: 30px">13</td>
+    </tr>
+    <tr style="width: 400px;height: 30px">
+        <td style="width: 100px;height: 30px">13</td>
+    </tr>
+    <tr style="width: 400px;height: 30px">
+        <td rowspan="2" style="width: 100px;height: 30px">12</td>
+        <td style="width: 100px;height: 30px">13</td>
+    </tr>
+    <tr style="width: 400px;height: 30px">
+        <td style="width: 100px;height: 30px">13</td>
+    </tr>
+    <tr style="width: 400px;height: 30px">
+        <td rowspan="4" style="width: 100px;height: 30px">11</td>
+        <td rowspan="2" style="width: 100px;height: 30px">12</td>
+        <td style="width: 100px;height: 30px">13</td>
+    </tr>
+    <tr style="width: 400px;height: 30px">
+        <td style="width: 100px;height: 30px">13</td>
+
+    </tr>
+    <tr style="width: 400px;height: 30px">
+        <td rowspan="2" style="width: 100px;height: 30px">12</td>
+        <td style="width: 100px;height: 30px">13</td>
+    </tr>
+    <tr style="width: 400px;height: 30px">
+        <td style="width: 100px;height: 30px">13</td>
+    </tr>
+</table>
+<form action="">
+    <p>账号：
+    <input type="text" placeholder="请输入账号"><br>
+    </p>
+    <p>邮箱：
+    <input type="text" placeholder="请输入邮箱"><br>
+    </p>
+    <p>密码：
+    <input type="password" placeholder="请输入密码">
+    </p>
+    <p>性别:
+<input type="radio" name="sex">男
+<input type="radio" name="sex">女<br>
+    </p>
+    <p>技能:
+    <input type="checkbox" name="语言">html+css
+    <input type="checkbox" name="语言">javascript
+    <input type="checkbox" name="语言">php
+    <input type="checkbox" name="语言">java <br>
+    </p>
+<p>头像:
+    <input type="file">
+</p>
+    居住地：
+    <select name="居住地" id="省" size="1">
+        <option value="广东省">广东省</option>
+    </select>
+    <select name="居住地" id="市" size="1">
+        <option value="广州市">广州市</option>
+    </select>
+    <select name="居住地" id="区" size="1">
+        <option value="天河区">天河区</option>
+    </select><br>
+    <label for="留言">留言：</label>
+    <textarea name="留言" id="留言" cols="30" rows="10" placeholder="请输入留言内容"></textarea><br>
+    <label for="验证码">验证码：</label>
+    <input type="text" id="验证码">
+    <img src="banner1.jpg" alt="图片" style="width: 50px;height: 30px"><br>
+    <input type="reset">
+    <input type="submit">
+</form>
+</body>
+</html>

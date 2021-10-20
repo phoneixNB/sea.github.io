@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Number.EPSILON：是js中最小的精度
+        // 很多方法都在Math和Number中
+        // Object.is 判断两个值是否完全相等，即使拿两个NaN作比较，也会返回ture
+        console.log(Object.is(NaN,NaN));
+        // Object.assign 对象的合并
+        const config={
+            name:"lolo",
+            age:17
+        }
+        const config1={
+            nsg:"lo",
+            fj:18
+        }
+        console.log(Object.assign(config,config1))
+        // Object.setPrototypeOf 设置原型对象
+        const school={
+            name:"heu"
+        }
+        const cities={
+            xiaoqu:["哈尔滨","青岛"]
+        }
+        Object.setPrototypeOf(school,cities)//将第二个参数指定为第一个参数对象的原型
+        console.log(Object.getPrototypeOf(school))//获取参数对象的原型
+        console.log(school);
+
+    </script>
+</body>
+</html>

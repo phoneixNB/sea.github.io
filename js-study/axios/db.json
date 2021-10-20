@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "dachangxuexi",
+      "author": "yushouhan"
+    },
+    {
+      "title": "今天是一个阴天",
+      "author": "李四",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some conmment",
+      "postId": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "body": "cssss",
+      "postId": 2,
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

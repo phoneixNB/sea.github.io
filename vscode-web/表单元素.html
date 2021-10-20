@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name=“stuInfo” action="test.php" method="get">
+    <input type="text" name="username" placeholder="请输入您的姓名">
+    <input type="submit">
+    <input type="text"><br>
+    <input type="text" name="test" placeholder="请输入一个文字" value="100" disabled="disabled" readonly>
+    <input type="text" name="test" placeholder="请输入一个文字" value="100" disabled="disabled" readonly>
+    <input type="password" name="test" placeholder="请输入一个文字" >
+    <input type="radio" name="sex"  checked>男
+    <input type="radio" name="sex"  >女
+    <input type="checkbox" name="num" checked >1
+    <input type="checkbox" name="num" checked>2
+    <input type="checkbox" name="num"  >3
+    <input type="file">
+    <input type="button" value="登录"><br>
+    <input type="image" src="https://img.alicdn.com/imgextra/i2/29855095/O1CN01Ux8bC81nVYcSTwF7X_!!0-saturn_solar.jpg_468x468q75.jpg_.webp" title="shangpin">
+    <input type="reset" value="取消"><br>
+    <input type="submit"><br>
+    <form action="">
+        <textarea name="memo" id="memo" cols="30" rows="10">beizhu</textarea>
+        <label for="sex">性别：</label>
+        <select name="" id="sex">
+            <option value="male">男</option>
+            <option value="female">女</option>
+        </select><br>
+        <label for="选课">选课：</label>
+        <select name="" id="选课" multiple size="1">
+            <option value="male">男</option>
+            <option value="female">女</option>
+        </select>
+    </form>
+    <button id="btnok">确认</button><!--这里主要用来调用代码-->
+    <form action="test.png">
+        <input type="text" name="info">
+        <button>提交</button><!--这里用来提交，与input的submit相同-->
+    </form>
+</form>
+</body>
+</html>

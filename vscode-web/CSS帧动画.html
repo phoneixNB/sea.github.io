@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        font-size: 100px;
+        border: 1px solid slategray;
+        background-color: salmon;
+    }
+    @keyframes beat/*动画名称*/ {
+        30%{transform: scale(1.5)}
+        100%{transform: scale(1)}
+    }
+    .num{
+        animation: beat 2s/*动画时长*/3s/*延迟时间*/ infinite/*动画无限循环*/;
+    }
+
+</style>
+<body>
+<div class="num">heu</div>
+
+</body>
+</html>

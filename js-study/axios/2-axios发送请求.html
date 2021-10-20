@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <style>
+        #btn1{
+           
+            background-color: fuchsia;
+            color: cornsilk;
+        }
+        #btn2{
+            background-color:yellow;
+            color: darkcyan;
+        }
+        #btn3{
+            background-color:green;
+            color: cornsilk;
+        }
+        #btn4{
+            background-color:red;
+            color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>基本使用</h1>
+        <button id="btn1">发送get请求</button>
+        <button id="btn2">发送put请求</button>
+        <button id="btn3">发送post请求</button>
+        <button id="btn4">发送delete请求</button>
+    </div>
+    <script>
+        // 获取按钮
+        const btns=document.querySelectorAll('button');
+        // btns[0].onclick=function(){
+        //     // 发送ajax请求
+        //     axios({
+        //         // 请求类型
+        //         method:'GET',
+        //         // URL
+        //         url:'http://localhost:3000/posts/2'
+        //     }).then(response=>{
+        //         console.log(response);
+        //     })
+        // }
+        // // 添加一篇文章
+        // btns[2].onclick=function(){
+        //     axios({
+        //         method:'POST',
+        //         url:'http://localhost:3000/posts',
+        //         data:{
+        //             title:'今天天气不错',author:"张三"
+        //         }
+        //     }).then(response=>{
+        //         console.log(response);
+        //     })
+        // }
+        // // 更新数据
+        // btns[1].onclick=function(){
+        //     axios({
+        //         method:'PUT',
+        //         url:"http://localhost:3000/posts/3",
+        //         data:{
+        //             title:'今天是一个阴天',
+        //             author:'李四'
+        //         }
+        //     }).then(response=>{
+        //         console.log(response);
+        //     })
+        // }
+        // btns[3].onclick=function(){
+        //     axios({
+        //         method:"delete",
+        //         url:"http://localhost:3000/posts/4"
+        //     }).then(response=>{
+        //         console.log(response);
+        //     })
+        // }
+
+
+
+
+
+
+        // 通过axios.request发送axios请求
+        // btns[0].onclick=function(){
+        //     axios.request({
+        //         method:"GET",
+        //         url:"http://localhost:3000/posts"
+        //     }).then(response=>{
+        //         console.log(response);
+        //     })
+        // }
+        // // 发送post请求
+        // btns[2].onclick=function(){
+        //     axios.post(
+        //       "http://localhost:3000/comments",
+        //       {
+        //         "body": "cssss",
+        //         "postId": 2
+        //       }
+        //     ).then(response=>{
+        //         console.log(response);
+        //     })
+        // }
+
+
+
+
+        // 这样可以设置默认配置
+        axios.defaults.baseURL="http://localhost:3000"
+        axios.defaults.method='POST'
+        btns[2].onclick=function(){
+            axios({
+                url:"/posts"
+            }).then(response=>{
+                console.log(response);
+            })
+        }
+    </script>
+</body>
+</html>

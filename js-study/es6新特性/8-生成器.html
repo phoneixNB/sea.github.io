@@ -20,7 +20,7 @@
         //     console.log(v);
         // }
         // 通过以上的步骤才能执行
-        function one(){
+           function one(){
             setTimeout(()=>{
                 console.log(111);
                 iterator.next();
@@ -48,6 +48,42 @@
         }
         let iterator=gen();
         iterator.next();
+        
+     
+        // function one(){
+        //     setTimeout(()=>{
+        //         console.log(111);
+        //     },1000)
+            
+        // }
+        // function two(){
+        //     setTimeout(()=>{
+        //         console.log(222);
+        //     },2000)
+            
+        // }
+        // function three(){
+        //     setTimeout(()=>{
+        //         console.log(333);
+        //     },3000)
+        // }
+        // function gen(){
+        //     one();
+        //     two();
+        //     three();
+        // }
+        // gen()
+        function * generator() {
+                        yield 1;
+                        yield 2;
+                        yield 3;
+        }
+
+        const ge = generator();
+        console.log(ge.next());
+        console.log(ge.next());
+        console.log(ge.next());
+        console.log(ge.next());
     </script>
 </body>
 </html>

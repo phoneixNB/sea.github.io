@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // es6模块化语法
+        // 模块功能主要由两个命令构成export和import
+        // export命令用于规定模块的对外接口
+        // import命令用于输入其他模块提供的功能
+    </script>
+    <script type="module">
+        // 通用引用方式
+                // 引入m1.js模块内容,
+                import*as m1 from "./m1.js";
+                console.log(m1);
+                // 引入m2.js模块内容，
+                import*as m2 from "./m2.js";
+                console.log(m2);
+                // 引入m3.js模块内容
+                import*as m3 from "./m3.js"
+                console.log(m3)
+                m3.default.change();
+        // 结构赋值形式
+                import{school,teach}from "./m1.js";
+                console.log(school,teach);
+                import{school as heu,findjob}from "./m2.js";
+                console.log(heu,findjob);//此处使用as 为school赋予别名，防止与上一个school冲撞
+                import{default as m30}from "./m3.js";
+                console.log(m30);
+                m30.change();//可以直接这样用了
+        // 简便形式，只能针对默认暴露
+                import m31 from "./m3.js";
+                console.log(m31);
+    </script>
+</body>
+</html>

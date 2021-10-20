@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 请求拦截器:在发送请求之前通过一些回调对请求检测.合格发送,不合格就终止
+        // 响应拦截器:在接受到响应之前,对响应进行一些处理.
+        // 设置请求拦截器
+        let rqt=axios.create({
+            baseURL:"http://localhost:3000",
+            method:"GET"
+        })
+        rqt.interceptors.request.use(function(config){
+            console.log("请求拦截器,成功");
+            // return config;也可以修改config的参数
+            throw "参数出了问题"
+        },function(error){
+            console.log("请求拦截器,失败")
+            return Promise.reject(error)
+        });
+        // 设置响应拦截器
+        rqt.interceptors.response.use(function(response){
+            console.log("请求拦截器,成功");
+            return response;//可以对response进行参数的修改
+        },function(error){
+            console.log("请求拦截器,失败")
+            return Promise.reject(error);
+        })
+        // 发送请求
+        
+        rqt({
+            url:"/posts"
+        }).then(response=>{
+            console.log(response)
+        }).catch(reson=>{
+            console.log("自定义回调失败")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+*{
+    padding: 0;margin: 0;
+}
+.box{
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.box>img{
+    width: 300px;
+    height: 300px;
+}
+.box>*{
+    transition: 1s;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.box h2{
+   color: #ffcdee;
+position: absolute;
+    left: 100px;
+    top:100px;
+}
+    .box p{
+        color: whitesmoke;
+    }
+    .box p:nth-of-type(1){
+        transform: translateX(140px) translateY(-150px);
+    }  .box p:nth-of-type(2){
+        transform: translateX(180px) translateY(-110px);
+transition: 1s 0.1s;
+    }  .box p:nth-of-type(3){
+        transform: translateX(220px) translateY(-100px);
+                      transition: 1s 0.2s;
+    }
+.box:hover p:nth-of-type(1){
+    transform: translateY(140px) translateX(60px);
+}.box:hover p:nth-of-type(2){
+    transform: translateY(180px) translateX(60px);
+}.box:hover p:nth-of-type(3){
+    transform: translateY(220px) translateX(60px);
+}
+ .box img:hover{
+     transform: scale(1.5) rotateZ(30deg);
+ }
+</style>
+<body>
+<div class="box">
+    <img src="素材/banner2.png" alt="">
+    <h2>图片</h2>
+    <p class="p1">ss</p>
+    <p class="p2">ss</p>
+    <p class="p3">ssss</p>
+</div>
+</body>
+</html>

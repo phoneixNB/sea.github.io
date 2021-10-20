@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /**号用来匹配所有标签*/
+        *{
+            color: blue;
+        }
+        /*标签选择器*/
+        span{
+            display: block;
+            margin-right: 20px;
+            border: 1px solid red;
+        }
+        /*类选择器*/
+        .wrapper{
+            color: #b5ff7d;
+        }
+        /*id选择器*/
+        #content{
+            color: aqua;
+        }
+        /*派出选择器*/
+        ul.box2 li{
+            color:red;
+        }
+    </style>
+    <style>
+       h1,.box,p{
+           color: gray;
+       }
+       p {
+           width: 100px;
+           background: #b5ff7d;
+           }
+       /*样式继承*/
+       .test{
+           font-size: 18px;
+       }
+       .test em{
+           font-weight: bold;
+           /*改写父元素传过来的样式*/
+           font-size: 56px;
+       }
+    </style>
+</head>
+<body>
+<p>1</p>
+<div>1</div>
+<span>1</span>
+<span>2</span>
+<div class="wrapper">xixixi</div>
+<p class="wrapper">xixixi</p>
+<p id="content">这是内容</p>
+<ul class="box1">
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+</ul>
+<ul class="box2">
+    <li>001</li>
+    <li>002</li>
+    <li>003
+        <ul>
+            <li>lili1</li>
+            <li>lili2</li>
+        </ul>
+    </li>
+</ul>
+<p>p</p>
+<div class="test">这是一个<em>测试</em>。</div>
+</body>
+</html>

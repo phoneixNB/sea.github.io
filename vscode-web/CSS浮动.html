@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper{
+            width: 600px;
+            margin: auto;
+            border: 1px solid darkgreen;
+            overflow: hidden;
+        }
+        .wrapper:after{/*清除浮动方法三*/
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .box1,.box2,.box3{
+            width: 200px;
+            height: 150px;
+
+        }
+        .box1{
+            background-color:red;
+            float: left;
+        }
+        .box2{
+            background-color: #ff8c68;
+            float: right;
+        }
+        .box3{
+            background-color: darkkhaki;
+        }
+    </style>
+    <style>
+        .inform{
+            width: 600px;
+            border: 1px solid #b5ff7d;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .left{
+            float: left;
+            text-align: center;
+        }
+        .left,.photo{
+            width: 200px;
+            height: 300px;
+            border:1px solid #ff8c68;
+            display: table-cell;
+            vertical-align: middle;
+            margin: 20px 0 20px 20px;
+            background-color: #ff8c68;
+        }
+        .describe{
+            width: 300px;
+            float: left;
+            height: 290px;
+            margin: 20px;
+            border: 1px solid #ff7efa;
+            padding: 10px 0 0 20px;
+        }
+    </style>
+</head>
+<body>
+<!--清除浮动方法二-->
+<!--<div class="wrapper">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    </div>
+    <div class="box3">box3</div>-->
+ <div class="wrapper">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    </div>
+    <div class="box3">box3</div>
+<!--    <div class="wrapper">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    &lt;!&ndash;清除浮动方法1&ndash;&gt;
+    <div class="clear"></div>
+    <div class="box3">box3</div>
+</div>-->
+<div class="inform">
+    <div class="left">
+        <div class="photo">头像</div>
+        <div class="name">姓名</div>
+    </div>
+    <div class="describe">描述</div>
+</div>
+</body>
+</html>

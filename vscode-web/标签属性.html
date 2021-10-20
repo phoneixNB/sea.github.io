@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签属性</title>
+</head>
+<body>
+<!--标签的通用属性，自由属性，自定义属性-->
+<!--id号,id名称在一个网页中一定是唯一的-->
+<p id="p1">段落一</p>
+<p id="p2">段落二</p>
+<!--class：给一组标签取一个类名-->
+<div class="test">div</div>
+<p class="test">p</p>
+<!--style；用来设置当前标签样式-->
+<p style="color:red;width:200px;border:1px solid #00f; ">这是一个测试</p>
+</body>
+<!--标签自定义属性-->
+<!--<img data-src="图片名" alt="提示文本"/>-->
+<!--<p data-id="goodsid">....</p>-->
+<!--表格标签-->
+<table border="1" width="400" cellspacing="1">
+    <tr>
+        <td rowspan="2">1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+</table>
+<table border="1" width="400" cellspacing="1">
+    <tr>
+        <td>1</td>
+        <td colspan="2">2</td>
+
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td colspan="3">7</td>
+
+    </tr>
+</table>
+</table>
+<table border="1" width="400" cellspacing="1">
+    <tr>
+        <td rowspan="2">1</td>
+        <td colspan="2">2</td>
+
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td colspan="3">7</td>
+
+    </tr>
+</table>
+<table border="1" width="600" align="center">
+    <caption>学生信息表</caption>
+    <thead>
+    <tr>
+        <td>学号</td>
+        <td>姓名</td>
+        <td>家庭住址</td>
+        <td>备注</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td align="center">001</td>
+        <td>张三*</td>
+        <td>ajj</td>
+        <td>sjkja</td>
+    </tr>
+    <tr>
+        <td align="center">002</td>
+        <td>澳涤生</td>
+        <td>shjj</td>
+        <td>sa</td>
+    </tr>
+    <tr>
+        <td align="center">003</td>
+        <td>xiaohong</td>
+        <td>ss</td>
+        <td>ddd</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="4" align="center">*为优秀学生</td>
+    </tr>
+    </tfoot>
+</table>
+</html>

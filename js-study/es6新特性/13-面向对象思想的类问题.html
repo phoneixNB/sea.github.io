@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // es5中使用构造函数实现继承,组合继承法
+        function Father(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        function Son(name,age,price){
+            Father.call(this,name,age);
+            this.price=price;
+        }
+        Son.prototype=new Father();
+        Son.prototype.constructor=Son;
+        son1=new Son('tom',13,2000)
+        console.log(son1);
+        // es6类的继承
+        class Phone{
+            // 构造方法
+            constructor(brand,price){
+                this.brand=brand;
+                this.price=price;
+            }
+            // 父类的成员属性
+            call(){
+                console.log("我可以打电话")
+            }
+        }
+        class SmartPhone extends Phone{
+            // 构造方法
+            constructor(brand,price,color,size){
+                super(brand,price);//与Phone.call(this,brand,price)是一样的
+                this.color=color;
+                this.size=size;
+            }
+            photo(){
+                console.log('我可以打电话')
+            }        
+        }
+        const xiaomi=new SmartPhone("小米",2199,"黑色","4.7")
+        console.log(xiaomi);
+        xiaomi.call();
+        // 子类对父类方法的重写，直接在子类中重写同名方法。
+        // class中的get 和 set.
+        class Phone1{
+            get price(){
+                console.log("价格属性被调用了");
+                return "iloveyou"
+            }//注意这是属性不是方法，用来动态封装
+            set price(newVal){
+                console.log(newVal)
+            }//用来赋值
+        }
+        let s=new Phone1;
+        s.price;
+        console.log(s.price);
+        s.price="free";
+        console.log(typeof(s.price))//string类型的。
+
+
+    </script>
+</body>
+</html>

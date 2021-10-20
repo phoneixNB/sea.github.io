@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS基础</title>
+    <!--内部样式表,要写在head里面-->
+    <style>
+        @import "CSS/test.css";
+        p{
+            background: #cfa5ff;
+            font-size: 18px;
+            font-style: italic;
+        }
+    </style>
+    <!--引入外部样式文件-->
+    <!--link:css-->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+<!--行间样式,嵌入式样式-->
+<div style="color: red;width: 100px;border:1px solid blue">行间样式测试</div>
+<div>行间样式测试</div>
+<p>段落1</p>
+<p>段落2</p>
+<span>外部样式测试</span>
+<span>外部样式测试</span>
+<span>外部样式测试</span>
+<span>外部样式测试</span>
+<div class="box">导入外部样式</div>
+<div class="box">导入外部样式</div>
+<div class="box">导入外部样式</div>
+<em class="box">老师好</em>
+</body>
+</html>
