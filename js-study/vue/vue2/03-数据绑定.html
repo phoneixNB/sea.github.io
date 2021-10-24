@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        单项数据绑定: <input type="text" v-bind:value="name">
+        <!-- v-bind这样是单向的,修改data中的值可以更改浏览器中显示的数据,但是浏览器中输入的数据不可以改变data中的数据 -->
+        双项数据绑定: <input type="text" v-model:value="name">
+        <!-- 可以实现双向绑定,但是v-model只能用于表单元素上,不能用于类似于没有value的标签,v-model默认收集value属性,所以我们直接可以如下写 -->
+        双项数据绑定: <input type="text" v-model="name">
+    </div>
+</body>
+<script>
+    Vue.config.productionTip=false
+    // 数据绑定.
+    new Vue({
+        el:"#root",
+        data:{
+            name:'yushouhan'
+        }    
+    })
+</script>
+</html>

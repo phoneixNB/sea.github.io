@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <h1>学校名称:{{name}}</h1>
+        <h1>学校地址:{{adress}}</h1>
+    </div>
+</body>
+<script>
+    // M-就是data的数据
+    // V-就是模板,dom
+    // VM-就是Vue实例,我们通过它来进行数据与模板的一个交互,通常我们把vm作为实例对象名
+    Vue.config.productionTip=false;
+    new Vue({
+        el:"#root",
+        data:{
+            name:"yushouhan",
+            adress:"haerbin"
+        }
+    })//插值语句中可以插入任何vue实例中的属性
+</script>
+</html>

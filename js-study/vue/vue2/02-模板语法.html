@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h1>插值语法</h1>
+        <h3>你好 {{name}}</h3>
+        <hr>
+        <h1>指令语法</h1>
+        <!-- //v-bind,指绑定,这样写的话,href里的url会作为表达式去执行,可以简写为  :   ,动态的绑定标签属性-->
+        <a v-bind:href="url">点我去尚硅谷</a>
+        <!-- 插值语法用于标签体内容,指令语法可以进行解析语法(不仅仅只有v-bind,还有别的) -->
+    </div>
+</body>
+<script>
+    Vue.config.productionTip=false;
+    new Vue({
+        el:'#root',
+        data:{
+            name:"jack",
+            url:'http://www.atguigu.com'
+
+        }
+    })
+</script>
+</html>
